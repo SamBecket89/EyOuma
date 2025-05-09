@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Loading nothing...</title>
+  <title>Join the silence...</title>
   <style>
     body {
       background-color: #000;
@@ -14,24 +14,12 @@
       font-family: 'Helvetica Neue', sans-serif;
       font-size: 1.6em;
       flex-direction: column;
-    }
-
-    .dots::after {
-      content: "";
-      display: inline-block;
-      animation: dots 1.5s steps(3, end) infinite;
-    }
-
-    @keyframes dots {
-      0% { content: ""; }
-      33% { content: "."; }
-      66% { content: ".."; }
-      100% { content: "..."; }
+      text-align: center;
     }
 
     .fade {
       opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
+      animation: fadeIn 2.5s ease-in-out forwards;
     }
 
     @keyframes fadeIn {
@@ -41,15 +29,15 @@
 </head>
 <body>
   <div class="fade">
-    Loading nothing<span class="dots"></span><br><br>
-    Please wait.<br>
-    <span style="opacity:0.7">Breathe in.</span>
+    Join the silence.<br><br>
+    No content is loading.<br>
+    Just space.
   </div>
 
   <script>
     setTimeout(function() {
       window.location.href = "pause.html";
-    }, 3000); // переход через 3 секунды
+    }, 4000); // 4 сек для эффекта
   </script>
 </body>
 </html>
