@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Please wait...</title>
+  <title>Loading nothing...</title>
   <style>
     body {
       background-color: #000;
@@ -16,15 +15,41 @@
       font-size: 1.6em;
       flex-direction: column;
     }
+
+    .dots::after {
+      content: "";
+      display: inline-block;
+      animation: dots 1.5s steps(3, end) infinite;
+    }
+
+    @keyframes dots {
+      0% { content: ""; }
+      33% { content: "."; }
+      66% { content: ".."; }
+      100% { content: "..."; }
+    }
+
+    .fade {
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
-  <div>Please wait...<br><span style="opacity:0.6">Breathe in.</span></div>
+  <div class="fade">
+    Loading nothing<span class="dots"></span><br><br>
+    Please wait.<br>
+    <span style="opacity:0.7">Breathe in.</span>
+  </div>
 
   <script>
     setTimeout(function() {
       window.location.href = "pause.html";
-    }, 3000); // через 3 секунды переходит на pause.html
+    }, 3000); // переход через 3 секунды
   </script>
 </body>
 </html>
