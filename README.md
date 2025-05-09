@@ -1,9 +1,25 @@
-# NuLumA
+# EyOuma
 
-**No content. Just space.**  
-The first silence-as-a-service platform.  
-We offer digital stillness — through app, Slack integration, and intentional voids.
+**No content. Just space.**
 
-Visit the live site: [https://sambecket89.github.io/nuluma/](https://sambecket89.github.io/nuluma/)
+EyOuma is a concept startup that delivers structured silence as a digital service.  
+We believe in the power of absence, breath, and nothingness — intentionally designed.
 
-FrançAIs approves this message.
+## What is EyOuma?
+
+- **Ey** — attention, witnessing  
+- **Ouma** — breath, emptiness  
+→ A sanctuary of presence in a distracted world.
+
+## Included:
+
+- 🌀 Minimalist site (HTML only)
+- 🌕 Logo and icon (glowing circle)
+- 🧘 StillBot concept scripts
+- 📄 One-page pitch (PDF & DOCX)
+- 🤫 Prototype space/pause screens
+
+---
+
+Built to be sold, licensed or loved.  
+Contact: `contact@eyouma.com`
