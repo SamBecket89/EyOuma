@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,24 +15,26 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px;
+      padding: 40px 20px;
     }
     .logo {
-      width: 140px;
-      margin-bottom: 20px;
+      width: 180px;
+      margin-bottom: 30px;
     }
     h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
+      font-size: 2.8em;
+      margin: 0;
     }
-    h2 {
-      font-weight: normal;
-      color: #aaa;
-      margin-top: 0;
+    .slogan {
+      font-size: 1.3em;
+      color: #ccc;
+      line-height: 1.4em;
+      text-align: center;
+      margin: 10px 0 40px 0;
     }
     section {
       max-width: 800px;
-      margin: 60px 0;
+      margin: 40px 0;
       text-align: center;
     }
     .section-title {
@@ -41,7 +44,7 @@
     }
     .text {
       font-size: 1.1em;
-      line-height: 1.6em;
+      line-height: 1.4em;
       color: #ddd;
     }
     .cta {
@@ -54,18 +57,20 @@
       letter-spacing: 1px;
       margin-top: 20px;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
     .footer {
       font-size: 0.9em;
-      color: #666;
-      margin-top: 100px;
+      color: #555;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="EyOuma Logo" class="logo" />
+  <img src="eyouma_logo_circle_only.png" alt="EyOuma Symbol" class="logo" />
   <h1>EyOuma</h1>
-  <h2>No content. Just space.</h2>
+  <div class="slogan">No content.<br>Just space.</div>
 
   <section>
     <div class="section-title">What is EyOuma?</div>
@@ -102,7 +107,7 @@
       Pilots and partnerships are open.<br /><br />
       Be among the first to hear… nothing.
     </div>
-    <button class="cta">Join the Silence</button>
+    <a class="cta" href="loading.html">Begin Pause</a>
   </section>
 
   <div class="footer">
