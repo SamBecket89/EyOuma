@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Please wait...</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 1.6em;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div>Please wait...<br><span style="opacity:0.6">Breathe in.</span></div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "pause.html";
+    }, 3000); // через 3 секунды переходит на pause.html
+  </script>
+</body>
+</html>
