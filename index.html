@@ -2,15 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NuLumA — Silence-as-a-Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NuLumA — No content. Just space.</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: Helvetica, sans-serif;
-      text-align: center;
-      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+    .logo {
+      width: 140px;
+      margin-bottom: 20px;
     }
     h1 {
       font-size: 3em;
@@ -21,43 +29,87 @@
       color: #aaa;
       margin-top: 0;
     }
-    .section {
-      margin-top: 50px;
+    section {
+      max-width: 800px;
+      margin: 60px 0;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 1.4em;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+    .text {
       font-size: 1.1em;
       line-height: 1.6em;
-      color: #ccc;
+      color: #ddd;
     }
     .cta {
-      margin-top: 40px;
-      padding: 12px 24px;
-      border: 1px solid #fff;
       background: none;
+      border: 1px solid #fff;
+      padding: 12px 24px;
       color: #fff;
-      font-weight: bold;
       text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 20px;
       cursor: pointer;
+    }
+    .footer {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 100px;
     }
   </style>
 </head>
 <body>
+  <img src="logo.png" alt="NuLumA Logo" class="logo" />
   <h1>NuLumA</h1>
   <h2>No content. Just space.</h2>
 
-  <div class="section">
-    Your attention is under siege. <br>
-    Your body needs pause. <br>
-    Your mind deserves stillness. <br><br>
-    NuLumA is a platform of structured silence.<br>
-    No content. No feed. Just stillness.
-  </div>
+  <section>
+    <div class="section-title">Why we exist</div>
+    <div class="text">
+      Your attention is under siege.<br />
+      Your body needs pause.<br />
+      Your mind deserves stillness.<br /><br />
+      NuLumA is a platform of structured absence.<br />
+      No lessons. No guidance. No feed.<br />
+      Just designed silence.
+    </div>
+  </section>
 
-  <div class="section">
-    - NuLumA App<br>
-    - StillBot for Slack / Teams<br>
-    - VoidAPI for HR<br>
-    - SilentRoom (coming soon)
-  </div>
+  <section>
+    <div class="section-title">What you get</div>
+    <div class="text">
+      - NuLumA App — silent sessions, breath sync<br />
+      - StillBot — for Slack / Teams<br />
+      - VoidAPI — HR & wellbeing integrations<br />
+      - [Beta] SilentRoom — physical pause capsule
+    </div>
+  </section>
 
-  <div class="cta">Join the Silence</div>
+  <section>
+    <div class="section-title">Mission</div>
+    <div class="text">
+      To create digital sanctuaries of structured silence,<br />
+      empowering humans to pause, breathe,<br />
+      and realign in a world of noise.
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Status</div>
+    <div class="text">
+      NuLumA is in soft launch.<br />
+      Pilots and partnerships are open.<br /><br />
+      Be among the first to hear… nothing.
+    </div>
+    <button class="cta">Join the Silence</button>
+  </section>
+
+  <div class="footer">
+    contact@nuluma.io | nuluma.app
+  </div>
 </body>
 </html>
