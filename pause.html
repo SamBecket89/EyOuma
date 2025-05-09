@@ -2,39 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>EyOuma | Pause</title>
+  <title>EyOuma | Resonant Pause</title>
   <style>
     body {
       margin: 0;
       background-color: #000;
       color: #fff;
+      font-family: 'Helvetica Neue', sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      font-family: 'Helvetica Neue', sans-serif;
       font-size: 2em;
       flex-direction: column;
+      position: relative;
     }
+
     .circle {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       border: 3px solid #fff;
-      animation: pulse 6s ease-in-out infinite;
       margin-bottom: 20px;
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+      animation: breathe 12s infinite ease-in-out;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.3; }
-      50% { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(1); opacity: 0.3; }
+
+    @keyframes breathe {
+      0%   { transform: scale(1);   opacity: 0.3; }
+      33%  { transform: scale(1.15); opacity: 1;   }  /* inhale 4s */
+      50%  { transform: scale(1.15); opacity: 1;   }  /* hold 2s */
+      100% { transform: scale(1);   opacity: 0.3; }  /* exhale 6s */
+    }
+
+    .ref {
+      position: absolute;
+      bottom: 12px;
+      right: 20px;
+      font-size: 0.6em;
+      opacity: 0.45;
+    }
+
+    .ref a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .ref a:hover {
+      text-decoration: underline;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
   <div class="circle"></div>
   <div>Enter the silence.</div>
+
+  <div class="ref">
+    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5575449/" target="_blank">
+      Based on clinical research on resonance breathing (PMC5575449)
+    </a>
+  </div>
 </body>
 </html>
-
