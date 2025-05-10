@@ -29,7 +29,13 @@
       color: #ccc;
       line-height: 1.4em;
       text-align: center;
-      margin: 10px 0 40px 0;
+      margin: 10px 0 20px 0;
+    }
+    .quote {
+      font-size: 0.9em;
+      color: #888;
+      text-align: center;
+      margin-bottom: 40px;
     }
     section {
       max-width: 800px;
@@ -60,9 +66,21 @@
       display: inline-block;
     }
     .footer {
-      font-size: 0.9em;
-      color: #555;
+      font-size: 0.85em;
+      color: #666;
       margin-top: 60px;
+      text-align: center;
+      line-height: 1.5em;
+    }
+    .silence-button {
+      margin-top: 30px;
+      cursor: pointer;
+      color: #aaa;
+      font-size: 14px;
+    }
+    a {
+      color: #aaa;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -70,6 +88,11 @@
   <img src="logo.png" alt="EyOuma Logo" class="logo" />
   <h1>EyOuma</h1>
   <div class="slogan">No content.<br>Just space.</div>
+
+  <div class="quote">
+    * Two hours of silence a day stimulate new cell growth in the brain – 
+    <a href="research.html">see research</a>
+  </div>
 
   <section>
     <div class="section-title">What is EyOuma?</div>
@@ -115,13 +138,23 @@
       They don’t need more apps. They need less noise.<br>
       We're building structured silence for teams, too.
     </p>
-    <a href="pilot-form.html" class="cta" style="margin-top: 25px;">
+    <a href="#pilot-form" class="cta" style="margin-top: 25px;">
       Explore silent pilot
     </a>
   </section>
 
+  <div class="silence-button" onclick="playSilence()">♪ Tap to play “Silence”</div>
+  <script>
+    function playSilence() {
+      alert("Thank you for choosing real digital detox.");
+    }
+  </script>
+
   <div class="footer">
-    contact@eyouma.com | eyouma.io (soon)
+    © 2024 EyOuma. All rights reserved.<br>
+    Silence-as-a-Service™ is a conceptual platform currently in open beta.<br>
+    EyOuma™ is a trademark of its creator. For licensing inquiries: <a href="mailto:contact@eyouma.com">contact@eyouma.com</a>
   </div>
 </body>
 </html>
+
