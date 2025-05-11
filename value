@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EyOuma Valuation</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #eee;
+            font-family: 'Helvetica Neue', sans-serif;
+            padding: 40px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        h1 {
+            font-weight: 300;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+        h2 {
+            font-weight: 400;
+            font-size: 1.1rem;
+            margin: 2.5rem 0 1rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.7rem;
+        }
+        .highlight {
+            color: #fff;
+            font-weight: 500;
+        }
+        .divider {
+            height: 1px;
+            background: #333;
+            margin: 2.5rem 0;
+        }
+        .footer {
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        a {
+            color: #999;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            padding-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Why $20K?<br><span style="font-size: 1.4rem; color: #ccc;">The silent calculus</span></h1>
+
+    <div class="divider"></div>
+
+    <h2>Market Comparables</h2>
+    <ul>
+        <li>Premium <span class="highlight">.space domains</span>: $3K–8K</li>
+        <li>Validated <span class="highlight">wellness concepts</span>: $12K–25K</li>
+        <li>Peer-reviewed <span class="highlight">research packages</span>: $5K+</li>
+    </ul>
+
+    <h2>Cost to Replicate</h2>
+    <ul>
+        <li>Brand development: <span class="highlight">$18K</span></li>
+        <li>Scientific validation: <span class="highlight">$22K</span></li>
+        <li>UX/UI design: <span class="highlight">$15K</span></li>
+        <li><b>Total:</b> <span class="highlight">$55K+</span> (your price: <span class="highlight">$20K</span>)</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Corporate Perspective</h2>
+    <ul style="list-style-type: none; padding-left: 0;">
+        <li>• $20K = <span class="highlight">0.3%</span> of average HR tech budget</li>
+        <li>• 5% royalty ≈ <span class="highlight">1/4</span> of a junior developer's salary</li>
+        <li>• ROI in <span class="highlight">3-6 months</span> at 500 users</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <p style="font-size: 0.95rem; color: #999; line-height: 1.7;">
+        The price reflects <span class="highlight">first-mover advantage</span> in the untouched $4.2B silence tech space.<br>
+        No pressure — just arithmetic.
+    </p>
+
+    <div class="footer">
+        <a href="investor.html">← Back to silent mode</a>
+    </div>
+</body>
+</html>
