@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EyOuma | 4-2-6 Breathing</title>
+  <style>
+    html, body {
+      margin: 0;
+      background: #000;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 220px;
+      height: 220px;
+      margin-left: -110px;
+      margin-top: -110px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+    .timer {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle" id="circle"></div>
+  <div class="timer" id="timer">07:00</div>
+
+  <script>
+    let duration = 7 * 60;
+    const timerDisplay = document.getElementById("timer");
+    const circle = document.getElementById("circle");
+
+    // таймер обратного отсчета
+    const countdown = setInterval(() => {
+      duration--;
+      const m = String(Math.floor(duration / 60)).padStart(2, '0');
+      const s = String(duration % 60).padStart(2, '0');
+      timerDisplay.textContent = `${m}:${s}`;
+      if (duration <= 0) clearInterval(countdown);
+    }, 1000);
+
+    // дыхательный цикл 4-2-6
+    function breathingCycle() {
+      circle.style.transition = "transform 4s ease-in";
+      circle.style.transform = "scale(1.4)"; // вдох (4 сек)
+
+      setTimeout(() => {
+        circle.style.transition = "transform 2s ease";
+        circle.style.transform = "scale(1.4)"; // пауза (2 сек)
+      }, 4000);
+
+      setTimeout(() => {
+        circle.style.transition = "transform 6s ease-out";
+        circle.style.transform = "scale(1)"; // выдох (6 сек)
+      }, 6000);
+
+      setTimeout(breathingCycle, 12000); // повтор через 12 сек
+    }
+
+    breathingCycle();
+  </script>
+</body>
+</html>
