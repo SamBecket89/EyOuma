@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +10,7 @@
   <meta property="og:image" content="https://eyouma.space/assets/preview.jpg">
   <meta property="og:url" content="https://eyouma.space">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-<link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
+  <link rel="manifest" href="site.webmanifest">
   <style>
     body {
       margin: 0;
@@ -93,13 +88,71 @@
       color: #aaa;
       text-decoration: underline;
     }
+
+    .silent-banner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 30px 40px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 420px;
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      display: none;
+      transition: opacity 1.2s ease;
+    }
+
+    .silent-banner.visible {
+      display: block;
+      opacity: 1;
+    }
+
+    .silent-banner h2 {
+      font-size: 18px;
+      font-weight: 400;
+      margin: 0 0 12px 0;
+      color: #ddd;
+    }
+
+    .silent-banner p {
+      font-size: 13px;
+      color: #aaa;
+      margin: 0 0 16px 0;
+      line-height: 1.4;
+    }
+
+    .equalizer {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      height: 20px;
+    }
+
+    .bar {
+      width: 3px;
+      background: rgba(255,255,255,0.1);
+      animation: equalize 1.4s ease-in-out forwards;
+    }
+
+    .bar:nth-child(1) { animation-delay: 0.2s; animation-duration: 2s; }
+    .bar:nth-child(2) { animation-delay: 0.5s; animation-duration: 1.6s; }
+    .bar:nth-child(3) { animation-delay: 0.8s; animation-duration: 2.4s; }
+    .bar:nth-child(4) { animation-delay: 1.2s; animation-duration: 1.8s; }
+    .bar:nth-child(5) { animation-delay: 1.5s; animation-duration: 2.2s; }
+
+    @keyframes equalize {
+      0%   { height: 6px; background: rgba(255,255,255,0.05); }
+      30%  { height: 14px; background: rgba(255,255,255,0.15); }
+      60%  { height: 20px; background: rgba(255,255,255,0.25); }
+      100% { height: 6px; background: rgba(255,255,255,0.05); }
+    }
   </style>
 </head>
 <body>
-  <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
-    EyOuma — Infrastructure of Silence
-  </h1>
-
   <img src="logo.png" alt="EyOuma Logo" class="logo" />
   <h1>EyOuma</h1>
   <div class="slogan">No content.<br>Just space.</div>
@@ -145,38 +198,67 @@
       Be among the first to hear… nothing.
     </div>
     <a class="cta" href="loading.html">Join our emptiness</a>
- <section>
-  <div class="section-title">7 Minutes of Silence</div>
-  <div class="text">
-    Just seven quiet minutes.<br>
-    No visuals. No voice. Just you and the void.
-  </div>
-  <a class="cta" href="silence.html">Begin now</a>
-</section>
+  </section>
 
-<section id="hero" class="hero-section">
-  <h2 style="font-size: 2em;">Some companies<br>ask for silence too.</h2>
-  <p style="margin-top: 10px;">
-    They don’t need more apps. They need less noise.<br>
-    We're building structured silence for teams, too.
-  </p>
-  <a href="pilot-form" class="cta" style="margin-top: 25px;">
-    Explore silent pilot
-  </a>
-</section>
+  <section>
+    <div class="section-title">7 Minutes of Silence</div>
+    <div class="text">
+      Just seven quiet minutes.<br>
+      No visuals. No voice. Just you and the void.
+    </div>
+    <a class="cta" href="silence.html">Begin now</a>
+  </section>
 
+  <section id="hero" class="hero-section">
+    <h2 style="font-size: 2em;">Some companies<br>ask for silence too.</h2>
+    <p style="margin-top: 10px;">
+      They don’t need more apps. They need less noise.<br>
+      We're building structured silence for teams, too.
+    </p>
+    <a href="pilot-form" class="cta" style="margin-top: 25px;">
+      Explore silent pilot
+    </a>
+  </section>
 
   <div class="silence-button" onclick="playSilence()">♪ Tap to play “Silence”</div>
+
+  <div class="silent-banner" id="banner">
+    <h2>You’ve chosen silence.</h2>
+    <p>There’s no reward.<br>Only stillness.</p>
+    <div class="equalizer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
   <script>
     function playSilence() {
-      alert("Thank you for choosing real digital detox.");
+      const b = document.getElementById("banner");
+      b.classList.remove("visible");
+      b.style.display = 'block';
+      setTimeout(() => {
+        b.classList.add("visible");
+      }, 10);
     }
+
+    function hideSilence() {
+      const b = document.getElementById("banner");
+      b.classList.remove("visible");
+      setTimeout(() => {
+        b.style.display = 'none';
+      }, 300);
+    }
+
+    document.getElementById("banner").addEventListener("click", hideSilence);
   </script>
 
   <div class="footer">
     © 2025 EyOuma. All rights reserved.<br>
     Silence-as-a-Service™ is a conceptual platform currently in open beta.<br>
-    EyOuma™ is a trademark of its creator. For licensing inquiries: <a href="mailto:contact@eyouma.com">contact@eyouma.space</a>
+    EyOuma™ is a trademark of its creator. For licensing inquiries: <a href="mailto:contact@eyouma.space">contact@eyouma.space</a>
   </div>
 </body>
 </html>
