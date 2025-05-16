@@ -22,6 +22,39 @@
       align-items: center;
       padding: 40px 20px;
     }
+
+    #splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #splash img {
+      width: 240px;
+      height: auto;
+      animation: fadeout 1s ease 1.2s forwards;
+    }
+
+    @keyframes fadeout {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    @media (min-width: 768px) {
+      #splash {
+        display: none;
+      }
+    }
+
     .logo {
       width: 180px;
       margin-bottom: 30px;
@@ -153,6 +186,15 @@
   </style>
 </head>
 <body>
+  <div id="splash">
+    <img src="logo-splash.png" alt="EyOuma">
+  </div>
+  <script>
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+    }, 1500);
+  </script>
+
   <img src="logo.png" alt="EyOuma Logo" class="logo" />
   <h1>EyOuma</h1>
   <div class="slogan">No content.<br>Just space.</div>
@@ -180,17 +222,16 @@
     </div>
   </section>
 
-<section>
-  <div class="section-title">You receive</div>
-  <div class="text">
-    A pause in your day.<br />
-    A breath between tasks.<br />
-    A space for presence, not performance.<br />
-    A pattern interrupt — soft, structured, optional.<br />
-    No pressure. No goals. Just space.
-  </div>
-</section>
-
+  <section>
+    <div class="section-title">You receive</div>
+    <div class="text">
+      A pause in your day.<br />
+      A breath between tasks.<br />
+      A space for presence, not performance.<br />
+      A pattern interrupt — soft, structured, optional.<br />
+      No pressure. No goals. Just space.
+    </div>
+  </section>
 
   <section>
     <div class="section-title">Status</div>
